@@ -21,17 +21,7 @@ int GetSumOfOddIndexes(int[] NumsArray)
 
 void PrintArray(int[] NumsArray)
 {
-    int ArraySize = NumsArray.Length;
-    
-    Console.Write("[");
-    
-    for (int i = 0; i < ArraySize; i++)
-    {
-        Console.Write(NumsArray[i]);
-        if (i < ArraySize - 1) Console.Write(", ");
-    }
-    
-    Console.Write("]");
+   Console.Write($"[{string.Join(", ", NumsArray)}]");
 }
 
 int SIZE = 8;
