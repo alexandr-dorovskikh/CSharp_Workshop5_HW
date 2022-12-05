@@ -11,9 +11,9 @@ int GetEvenNumsCount(int[] NumsArray)
 {
     int Result = 0;
 
-    for (int i = 0; i < NumsArray.GetLength(0); i++)
+    foreach (int num in NumsArray)
     {
-        if (NumsArray[i] % 2 == 0) Result++;
+        if (num % 2 == 0) Result++;
     }
 
     return Result;        
@@ -21,17 +21,7 @@ int GetEvenNumsCount(int[] NumsArray)
 
 void PrintArray(int[] NumsArray)
 {
-    int ArraySize = NumsArray.Length;
-    
-    Console.Write("[");
-    
-    for (int i = 0; i < ArraySize; i++)
-    {
-        Console.Write(NumsArray[i]);
-        if (i < ArraySize - 1) Console.Write(", ");
-    }
-    
-    Console.Write("]");
+    Console.Write($"[{string.Join(", ", NumsArray)}]");
 }
 
 int SIZE = 8;
